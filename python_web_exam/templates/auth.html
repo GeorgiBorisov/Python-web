@@ -1,0 +1,15 @@
+{% extends 'main.html' %}
+{% block content %}
+    {% include 'menu.html' %}
+        <div class="container">
+            <form class="auth-form" action="{% url action %}" method="post">
+                {% if action == "register" %}
+                {% include "register.html" %}
+                {% elif action == "login" %}
+                {% include "login.html" %}
+                {% endif %}
+                {% csrf_token %}
+                <input type="submit" value="{{action}}">
+            </form>
+        </div>        
+{% endblock %}

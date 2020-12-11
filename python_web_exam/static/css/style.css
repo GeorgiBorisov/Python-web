@@ -1,0 +1,394 @@
+@font-face {
+    font-family: 'ubuntu';
+    src: url(../fonts/Ubuntu-Bold.ttf);
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: 'ubuntu';
+    src: url(../fonts/Ubuntu-BoldItalic.ttf);
+    font-weight: 700;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'ubuntu';
+    src: url(../fonts/Ubuntu-Italic.ttf);
+    font-weight: 400;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'ubuntu';
+    src: url(../fonts/Ubuntu-Light.ttf);
+    font-weight: 100;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ubuntu';
+    src: url(../fonts/Ubuntu-LightItalic.ttf);
+    font-weight: 100;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'ubuntu';
+    src: url(../fonts/Ubuntu-Medium.ttf);
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ubuntu';
+    src: url(../fonts/Ubuntu-MediumItalic.ttf);
+    font-weight: 500;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'ubuntu';
+    src: url(../fonts/Ubuntu-Regular.ttf);
+    font-weight: 400;
+    font-style: normal;
+}
+
+body {
+    font-size: 62.5%;
+    font-family: ubuntu;
+    background: #ececec;
+}
+
+ul {
+    list-style: none;
+}
+
+body .a, body a:active, body a:hover, body a:focus {
+    color: inherit;
+    text-decoration: none;
+}
+
+h2 {
+    width: 100%;
+}
+.menu-container {
+    background: #039ce4;
+}
+.menu-container ul {
+    margin: 0;
+    padding: 0;
+}
+.menu-container ul>li {
+    display: inline-block;
+    font-size: 24px;
+    font-size: 2.4em;
+    font-weight: 700;
+}
+
+.menu-container ul>li>a {
+    display: inline-block;
+    border: 2px solid #039ce4;
+    padding: 20px 10px;
+    color: #fff;
+    text-transform: uppercase;
+    width: 100%;
+    height: 100%;
+}
+
+.menu-container ul>li>a:hover {
+    color: #000;
+    border: 2px solid #000;
+    background: #fff;
+}
+
+.main-container {
+    background: url(../images/book-863418_1920.jpg);
+}
+
+.section-title {
+    color: #fff;
+    font-size: 36px;
+    font-size: 3.6em;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    text-align: center;
+}
+.section-title p.title,
+.section-title p.content {
+    color: #000;
+}
+.main-container>div.container>div.row {
+    background: rgba(255,255,255, 0.6);
+    /* background: #000 */
+}
+.main-container p.title {
+    font-size: 2em;
+    font-size: 20px;
+}
+.main-container p.content {
+    font-size: 1.6em;
+    font-size: 16px;
+}
+.posts-list {
+    background: #97cae2;
+}
+
+div.post:not(:last-child){
+    border-bottom: 2px solid #fff;
+}
+div.post p,a {
+    margin: 0;
+    color: #000;
+}
+div.post a {
+    text-transform: uppercase;
+    font-weight: 700;
+    display: inline-block;
+    margin-top: 15px;
+    font-size: 18px;
+    font-size: 1.8em;
+}
+div.post a:hover {
+    color: #fff;
+}
+
+div.post p {
+    font-size: 14px;
+    font-size: 1.4em;
+    padding-bottom: 15px;
+}
+
+
+footer {
+    background: #039ce4;
+    color: #fff;
+    font-size: 14px;
+    font-size: 1.4em;
+}
+.single-post img{
+    max-width: 70%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+
+}
+.single-post-title {
+    text-transform: uppercase;
+    margin: 25px 0;
+    letter-spacing: 2px;
+}
+
+.single-post-title,
+.single-post-content,
+.single-post-author {
+    color: #000;
+}
+
+.single-post-content,
+.single-post-author {
+    font-size: 20px;
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.single-post-author {
+    font-style: italic;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+label {
+    margin-bottom: 2px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    font-size: 14px;
+    font-size: 1.4em;
+    text-transform: uppercase;
+    text-align: center;
+}
+form > label,
+form > input {
+    display: block;
+}
+form.auth-form>input,
+form.auth-form>label {
+    width: 50%;
+    margin-left: 25%;
+}
+
+form.post-form>input,
+form.post-form>label,
+form.post-form>textarea {
+    width: 80%;
+    margin-left: 10%;
+}
+
+
+form.post-form {
+    width: 100%;
+}
+
+
+textarea,
+input{
+  border: 2px solid #039ce4;
+  border-radius: 5px;
+  font-size: 14px;
+  font-size: 1.4em;  
+  text-indent: 2px;
+  letter-spacing: 1px;
+  font-weight: 700;
+  background-color: #fff;
+  margin-bottom: 10px;
+}
+input:focus,
+textarea:focus{
+    outline: none !important;
+    border: 2px solid #e91515;
+}
+input[type=submit] {
+    padding: 10px 0;
+    font-size: 18px;
+    font-size: 1.8em;  
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+input[type=submit]:hover {
+    color: #fff;
+    background: #039ce4;
+}
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active  {
+    -webkit-box-shadow: 0 0 0 30px white inset !important;
+    box-shadow: 0 0 0 30px white inset !important;
+}
+
+input,
+input:focus,
+textarea, 
+textarea:focus {
+    background: #fff;
+}
+
+.view-profile {
+    padding: 50px 0;
+}
+
+.view-profile h2 {
+    margin: 10px 0;
+}
+
+.view-profile a {
+    color: #fff;
+    padding: 25px;
+    margin-right: 20px;
+    background: #039ce4;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 16px;
+    font-size: 1.6em;
+    margin-top: 30px;
+}
+
+.view-profile a.profile-edit:hover,
+.view-profile a.profile-delete:hover {
+    color: #fff;
+}
+
+.view-profile a.profile-edit:hover {
+    background: #05d161;
+}
+
+.view-profile a.profile-delete:hover {
+    background: #e91515;
+}
+
+.bg-modal{
+    width:100%;
+    height:100%;
+    background-color: rgba(0,0,0,0.5);
+    position: absolute;
+    top:0px;
+    left: 0;
+    z-index: 1;
+    display: none; 
+    justify-content: center;
+    align-items: center ;
+}       
+
+.bg-modal p {
+    color: #000;
+    text-transform: uppercase;
+    font-size: 20px;
+    font-size: 2em;
+    font-weight: 700;
+    text-align: center;
+}
+.modal-content{
+    width:600px;
+    height:300px;
+    background-color: white;
+    border:none; 
+    border-radius: 15px;
+    padding:15px;
+    position: relative;
+}
+.close{
+    position: absolute;
+    top:5px;
+    right: 14px;
+    font-size:50px;
+    font-size: 5em;
+    transform: rotate(45deg); 
+    cursor: pointer;
+    color: #fff;
+    z-index: 2;
+}
+.close:hover {
+    color: #e91515;
+}
+
+a.confirm-delete,
+a.cancel-delete {
+    text-align: center;
+    font-size: 20px;
+    font-size: 2em;
+}
+
+.confirm-delete:hover,
+.cancel-delete:hover {
+    color: #fff;
+}
+.confirm-delete:hover {
+    background: #e91515;
+}
+.cancel-delete:hover {
+    background: #05d161;
+}
+.pagination {
+    padding: 5px 0;
+}
+.pagination span,
+.pagination a {
+    margin: 20px 0;
+    padding: 10px;
+}
+.pagination li {
+    font-size: 16px;
+    font-size: 1.6em;
+    margin-right: 10px;
+}
+
+.pagination li.active {
+    color: #fff;
+    border: 1px solid #fff;
+}
+footer p {
+    font-style: italic;
+    width: 100%;
+    text-align: center;
+    margin: 0;
+    padding: 10px 0;
+}

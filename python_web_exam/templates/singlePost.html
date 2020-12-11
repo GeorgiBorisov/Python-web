@@ -1,0 +1,17 @@
+{% extends 'main.html' %}
+{% block content %}
+    {% include 'menu.html' %}
+        <div class="container">
+            <div class="row single-post">
+                <div class="col">
+                    <h1 class="single-post-title">{{ post.title }}</h1>
+                    {% if post.image %}
+                    <img src="{{post.image.url}}">
+                    {% endif %}
+                    <p class="single-post-content">{{ post.content }}</p>
+                    <p class="single-post-author">Author: {{ author }}</p>
+                </div>
+                
+            </div>
+        </div>
+{% endblock %}

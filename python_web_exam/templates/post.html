@@ -1,0 +1,19 @@
+{% extends 'main.html' %}
+{% block content %}
+    {% include 'menu.html' %}
+        <div class="container">
+            <div class="row">
+                <form enctype="multipart/form-data" class="post-form" action="{% url action %}" method="post">
+                    <label>{{ form.title.label }}</label>
+                    {{ form.title }}
+                    <label>{{ form.content.label }}</label>
+                    {{ form.content }}
+                    <label>{{ form.image.label }}</label>
+                    {{ form.image }}
+                    {{ form.author.as_hidden }}
+                    {% csrf_token %}
+                    <input type="submit" value="{{action}}">
+                </form>
+            </div>
+        </div>
+{% endblock %}
