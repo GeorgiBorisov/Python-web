@@ -385,6 +385,17 @@ a.cancel-delete {
     color: #fff;
     border: 1px solid #fff;
 }
+
+ul.errorlist>li {
+    text-align: center;
+    font-weight: 700;
+    color: #e91515;
+    text-transform: uppercase;
+    font-style: italic;
+    font-size: 16px;
+    font-size: 1.6em;
+}
+
 footer p {
     font-style: italic;
     width: 100%;

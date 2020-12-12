@@ -39,6 +39,7 @@ def single_post(request, pk):
     if request.method == 'GET':
         post = Posts.objects.get(pk=pk)
         author = User.objects.get(pk=post.author_id)
+        print(request.user)
         data = {
             'title': post.title,
             'post': post,
