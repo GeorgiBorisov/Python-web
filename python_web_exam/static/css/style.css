@@ -206,6 +206,12 @@ label {
     text-transform: uppercase;
     text-align: center;
 }
+
+label label {
+    font-size: 14px;
+    font-size: 1.4em;
+}
+
 form > label,
 form > input {
     display: block;
@@ -280,7 +286,11 @@ textarea:focus {
     margin: 10px 0;
 }
 
-.view-profile a {
+.view-profile a,
+a.post-edit,
+a.post-delete,
+a.confirm-delete,
+a.cancel-delete  {
     color: #fff;
     padding: 25px;
     margin-right: 20px;
@@ -291,17 +301,24 @@ textarea:focus {
     font-size: 1.6em;
     margin-top: 30px;
 }
-
+a.post-edit,
+a.post-delete {
+    margin-bottom: 30px;
+}
 .view-profile a.profile-edit:hover,
-.view-profile a.profile-delete:hover {
+.view-profile a.profile-delete:hover,
+a.post-edit:hover,
+a.post-delete:hover {
     color: #fff;
 }
 
-.view-profile a.profile-edit:hover {
+.view-profile a.profile-edit:hover,
+a.post-edit:hover {
     background: #05d161;
 }
 
-.view-profile a.profile-delete:hover {
+.view-profile a.profile-delete:hover,
+a.post-delete:hover {
     background: #e91515;
 }
 

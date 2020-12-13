@@ -43,21 +43,51 @@ def single_post(request, pk):
         data = {
             'title': post.title,
             'post': post,
-            'author': author.username
+            'author': author.username,
+            'user': request.user
         }
         return render(request, 'singlePost.html', data)
     
 def latest(request):
-    if request.method =='GET':
+    if request.method == 'GET':
         posts = Posts.objects.all().order_by('-created')[:10]
         data = {
             'title': 'Latest',
             'posts': posts
         }
-    return render(request, 'list.html', data)
+        return render(request, 'list.html', data)
+    elif request.method == 'POST':
+        form = EditPostsForm(request.POST, request.FILES)
+        if form.is_valid():
+            form.save()
+            print(request.POST)
+            return redirect('all-posts')
     
-def edit(request):
-    pass
-
-def delete(request):
-    pass
+def edit_post(request, pk):
+    post = Posts.objects.get(pk=pk)
+    if request.method == 'GET':
+        session = Session.objects.get(session_key=request.session.session_key)
+        user_id = session.get_decoded().get('_auth_user_id')
+        
+        form = PostsForm(initial={
+                'title': post.title,
+                'content': post.content,
+                'image': post.image,
+                'author': user_id
+            })
+        data = {
+            'title': post.title,
+            'form': form,
+            'action': 'edit',
+            'id': post.pk,
+        }
+        return render(request, 'post.html', data)
+    elif request.method == 'POST':
+        form = PostsForm(request.POST, request.FILES)
+        if form.is_valid():
+            form.save()
+            return redirect('/post/' + str(post.pk))
+        
+def delete_post(request, pk):
+    post = Posts.objects.get(pk=pk).delete()
+    return redirect('all-posts')

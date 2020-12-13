@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    document.querySelector('.profile-delete').addEventListener('click', () => {
+    document.querySelector('.profile-delete, .post-delete').addEventListener('click', () => {
         document.querySelector('.bg-modal').style.display='flex'
     })
 })
