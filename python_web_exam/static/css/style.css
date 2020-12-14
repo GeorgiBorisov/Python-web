@@ -53,6 +53,10 @@
     font-style: normal;
 }
 
+html::-webkit-scrollbar {
+    display: none;
+}
+
 body {
     font-size: 62.5%;
     font-family: ubuntu;
@@ -119,7 +123,6 @@ h2 {
 }
 .main-container>div.container>div.row {
     background: rgba(255,255,255, 0.6);
-    /* background: #000 */
 }
 .main-container p.title {
     font-size: 2em;
@@ -412,6 +415,29 @@ ul.errorlist>li {
     font-size: 16px;
     font-size: 1.6em;
 }
+.fixed {
+    position: fixed;
+    z-index: 10;
+}
+  
+.fixed-active {
+    padding-top: 0px;
+}
+
+.menu-wrapper.show {
+    display: unset;
+    width: 100%;
+}
+
+.menu-wrapper.show li {
+    display: block;
+    font-size: 12px;
+    font-size: 1.2rem;
+}
+
+.menu-wrapper.show a {
+    padding: 5px;
+}
 
 footer p {
     font-style: italic;
@@ -419,4 +445,86 @@ footer p {
     text-align: center;
     margin: 0;
     padding: 10px 0;
+}
+.fixed {
+    position: fixed;
+    z-index: 10;
+}
+  
+.fixed-active {
+    padding-top: 0px;
+}
+
+.bar-one, .bar-two, .bar-three {
+    width: 40px;
+    height: 5px;
+    background: #fff;
+}
+  
+.bar-one, .bar-two {
+    margin-bottom: 5px;
+}
+
+.mobile-menu {
+    position: absolute;
+    left: 30px;
+    top: 20px;
+    display: none;
+}
+
+@media(max-width: 768px) {
+    .mobile-menu {
+        display: unset;
+        cursor: pointer;
+    }
+    
+    .menu-wrapper.show {
+        display: unset;
+        width: 100%;
+    }
+    
+    .menu-wrapper.show li a{
+        display: block;
+        font-size: 12px;
+        font-size: 1.2rem;
+    }
+    
+    .menu-wrapper.show a {
+        padding: 5px;
+    }
+    
+    .menu-container {
+        padding-top: 60px;
+    }
+
+    .main-section {
+        padding: 90px 0;
+    }
+    
+    .menu-wrapper {
+        display: none;
+    }
+
+    .bar-one, .bar-two, .bar-three {
+        -webkit-transition: 0.2s;
+        transition: 0.2s;
+    }
+
+    .bar-one.rotated {
+        -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+        transform: rotate(-45deg) translate(-9px, 6px);
+    }
+
+    .bar-two.rotated {
+        opacity: 0;
+    }
+
+    .bar-three.rotated {
+        -webkit-transform: rotate(45deg) translate(-8px, -6px);
+        transform: rotate(45deg) translate(-8px, -6px);
+    }
+
+    .bar-one.rotated, .bar-three.rotated {
+        background: #fff;
+    }
 }

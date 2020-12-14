@@ -24,7 +24,7 @@ def create(request):
 
 def all_posts(request):
     if request.method == 'GET':
-        post_list = Posts.objects.all()
+        post_list = Posts.objects.all().order_by('-created')
         paginator = Paginator(post_list, 5)
         page = request.GET.get('page', 1)
         posts = paginator.page(page)

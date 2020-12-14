@@ -1,13 +1,56 @@
-document.addEventListener('DOMContentLoaded', () => {
-    document.querySelector('.profile-delete, .post-delete').addEventListener('click', () => {
-        document.querySelector('.bg-modal').style.display='flex'
+if(document.querySelector('.bg-modal')){
+    document.addEventListener('DOMContentLoaded', () => {
+        document.querySelector('.profile-delete, .post-delete').addEventListener('click', () => {
+            document.querySelector('.bg-modal').style.display='flex'
+        })
     })
+    
+    document.querySelector('.close').addEventListener('click', () => {
+        document.querySelector('.bg-modal').style.display='none'
+    })
+    
+    document.querySelector('.cancel-delete').addEventListener('click', () => {
+        document.querySelector('.bg-modal').style.display='none'
+    })
+}
+
+
+
+document.querySelector('.mobile-menu').addEventListener('click', () => {
+    document.querySelector('.bar-two').classList.toggle('rotated')
+    document.querySelector('.bar-one').classList.toggle('rotated')
+    document.querySelector('.bar-three').classList.toggle('rotated')
+    document.querySelector('.menu-wrapper').classList.toggle('show')
 })
 
-document.querySelector('.close').addEventListener('click', () => {
-    document.querySelector('.bg-modal').style.display='none'
-})
+const nav = document.querySelector('.menu-container')
+const navTop = nav.offsetTop
 
-document.querySelector('.cancel-delete').addEventListener('click', () => {
-    document.querySelector('.bg-modal').style.display='none'
-})
+debounce = (func, wait) => {
+	let timeout
+	return function() {
+        let context = this, 
+            args = arguments
+		let later = function() {
+			timeout = null
+		}
+		let callNow = !timeout
+		clearTimeout(timeout)
+		timeout = setTimeout(later, wait)
+		if (callNow) {
+            func.apply(context, args)
+        } 
+	}
+}
+console.log(window.scrollY)
+fixedNav = debounce( () => {
+    if (window.scrollY >= navTop){
+        nav.classList.add('fixed')
+        document.querySelector('main').classList.add('fixed-active')
+    } else {
+        nav.classList.remove('fixed')
+        document.querySelector('main').classList.remove('fixed-active')
+    }
+}, 25)
+
+window.addEventListener('scroll', fixedNav)
