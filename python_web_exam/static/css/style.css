@@ -72,11 +72,19 @@ body .a, body a:active, body a:hover, body a:focus {
     text-decoration: none;
 }
 
+main {
+    padding-top: 80px;
+    padding-bottom: 90px;
+}
+
 h2 {
     width: 100%;
 }
 .menu-container {
     background: #039ce4;
+    position: fixed;
+    z-index: 10;
+    
 }
 .menu-container ul {
     margin: 0;
@@ -167,6 +175,11 @@ footer {
     color: #fff;
     font-size: 14px;
     font-size: 1.4em;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    height: 90px;
 }
 .single-post img{
     max-width: 70%;
@@ -236,7 +249,6 @@ form.post-form>textarea {
 form.post-form {
     width: 100%;
 }
-
 
 textarea,
 input{
@@ -421,7 +433,7 @@ ul.errorlist>li {
 }
   
 .fixed-active {
-    padding-top: 0px;
+    padding-top: 80px;
 }
 
 .menu-wrapper.show {
@@ -439,6 +451,12 @@ ul.errorlist>li {
     padding: 5px;
 }
 
+/* footer {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+} */
 footer p {
     font-style: italic;
     width: 100%;
@@ -468,7 +486,7 @@ footer p {
 .mobile-menu {
     position: absolute;
     left: 30px;
-    top: 20px;
+    top: 25px;
     display: none;
 }
 
@@ -494,7 +512,7 @@ footer p {
     }
     
     .menu-container {
-        padding-top: 60px;
+        padding-top: 80px;
     }
 
     .main-section {
