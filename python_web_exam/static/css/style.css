@@ -126,7 +126,8 @@ h2 {
     text-align: center;
 }
 .section-title p.title,
-.section-title p.content {
+.section-title p.content,
+.my-posts {
     color: #000;
 }
 .main-container>div.container>div.row {
@@ -142,6 +143,7 @@ h2 {
 }
 .posts-list {
     background: #97cae2;
+    margin-top: 20px;
 }
 
 div.post:not(:last-child){
@@ -411,11 +413,15 @@ a.cancel-delete {
     font-size: 16px;
     font-size: 1.6em;
     margin-right: 10px;
+    border: 1px solid #97cae2;
 }
-
-.pagination li.active {
+.pagination li:not(.active):hover {
     color: #fff;
     border: 1px solid #fff;
+}
+.pagination li.active {
+    color:#e91515;
+    border: 1px solid #e91515;
 }
 
 ul.errorlist>li {

@@ -10,5 +10,5 @@ class PostsAdmin(admin.ModelAdmin):
         if getattr(obj, 'author', None) is None:
             obj.author = request.user
         obj.save()
-        # Register your models here.
+        
 admin.site.register(Posts, PostsAdmin)

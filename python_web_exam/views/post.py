@@ -28,10 +28,15 @@ def all_posts(request):
         paginator = Paginator(post_list, 5)
         page = request.GET.get('page', 1)
         posts = paginator.page(page)
+        print(posts.start_index())
+        print(page)
         data = {
             'title': 'All posts',
             'posts': posts
         }
+        data['custom_range'] = range(1,6)
+        # if int(page) % 5 == 0 and int(page) > 5:
+        #     data['custom_range'] = range(posts.start_index(), posts.start_index() + 6)
         return render(request, 'list.html', data)
         
     
