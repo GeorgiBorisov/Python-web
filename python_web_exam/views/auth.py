@@ -83,4 +83,5 @@ def signin(request):
             
 def signout(request):
     logout(request)
+    print(request)
     return redirect('index')

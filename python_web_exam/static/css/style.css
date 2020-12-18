@@ -80,16 +80,19 @@ main {
 h2 {
     width: 100%;
 }
+
 .menu-container {
     background: #039ce4;
     position: fixed;
     z-index: 10;
     
 }
+
 .menu-container ul {
     margin: 0;
     padding: 0;
 }
+
 .menu-container ul>li {
     display: inline-block;
     font-size: 24px;
@@ -125,22 +128,27 @@ h2 {
     letter-spacing: 5px;
     text-align: center;
 }
+
 .section-title p.title,
 .section-title p.content,
 .my-posts {
     color: #000;
 }
+
 .main-container>div.container>div.row {
     background: rgba(255,255,255, 0.6);
 }
+
 .main-container p.title {
     font-size: 2em;
     font-size: 20px;
 }
+
 .main-container p.content {
     font-size: 1.6em;
     font-size: 16px;
 }
+
 .posts-list {
     background: #97cae2;
     margin-top: 20px;
@@ -250,6 +258,7 @@ form.post-form>textarea {
 
 form.post-form {
     width: 100%;
+    margin-top: 50px;
 }
 
 textarea,
@@ -295,11 +304,11 @@ textarea:focus {
     background: #fff;
 }
 
-.view-profile {
+/* .view-profile {
     padding: 50px 0;
-}
+} */
 
-.view-profile h2 {
+h2 {
     margin: 10px 0;
 }
 
@@ -317,6 +326,7 @@ a.cancel-delete  {
     font-size: 16px;
     font-size: 1.6em;
     margin-top: 30px;
+    text-align: center;
 }
 a.post-edit,
 a.post-delete {
@@ -486,6 +496,51 @@ footer p {
 }
 
 @media(max-width: 768px) {
+    h2 {
+        font-size: 2em;
+        font-size: 20px;
+    }
+
+
+    .modal-content {
+        width: 350px;
+        height: 250px;
+        background-color: white;
+        border: none;
+        border-radius: 15px;
+        padding: 0;
+        position: relative;
+    }
+
+    .bg-modal p {
+        color: #000;
+        text-transform: uppercase;
+        font-size: 15px;
+        font-size: 1.5em;
+        font-weight: 700;
+        text-align: center;
+    }
+    a.confirm-delete,
+    a.cancel-delete {
+        text-align: center;
+        font-size: 15px;
+        font-size: 1.5em;
+    }
+
+    .view-profile a,
+    a.post-edit,
+    a.post-delete,
+    a.confirm-delete,
+    a.cancel-delete  {
+        color: #fff;
+        padding: 25px;
+        margin: 10px;
+        background: #039ce4;
+        text-transform: uppercase;
+        font-weight: 700;
+        font-size: 16px;
+        font-size: 1.6em;
+    }
     .mobile-menu {
         display: unset;
         cursor: pointer;
@@ -496,10 +551,16 @@ footer p {
         width: 100%;
     }
     
-    .menu-wrapper.show li a{
+    .menu-wrapper.show li a {
         display: block;
         font-size: 12px;
         font-size: 1.2rem;
+    }
+
+    .menu-wrapper.show li a:hover {
+        color: #fff;
+        border: 2px solid #039ce4;
+        background: #039ce4;
     }
 
     .menu-wrapper.show li {
@@ -543,5 +604,18 @@ footer p {
 
     .bar-one.rotated, .bar-three.rotated {
         background: #fff;
+    }
+
+    main {
+        padding-top: 60px;
+        padding-bottom: 70px;
+    }
+
+    .profile-mobile:first-of-type {
+        padding-top: 30px;
+    }
+
+    .profile-mobile {
+        padding-left: 15px;
     }
 }
