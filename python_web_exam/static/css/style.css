@@ -314,6 +314,12 @@ textarea,
 textarea:focus {
     background: #fff;
 }
+h1.profile-title {
+    width: 100%;
+    margin-top: 30px;
+    text-transform: uppercase;
+    border-bottom: 2px solid #e91515;
+}
 
 h2 {
     margin: 10px 0;
@@ -630,15 +636,17 @@ footer p {
         padding-bottom: 70px;
     }
 
-    .profile-mobile:first-of-type {
-        padding-top: 30px;
-    }
-
     .profile-mobile {
         padding-left: 15px;
     }
 
     a.profile-posts {
         margin-top: 50px;
+    }
+
+    h1.profile-title {
+        padding-left: 15px;
+        text-align: center;
+        border: none;
     }
 }
