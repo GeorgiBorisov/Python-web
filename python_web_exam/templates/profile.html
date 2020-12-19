@@ -18,6 +18,7 @@
                 <h2 class="profile-mobile">User status: {{ user.is_superuser|yesno:"Admin,Regular" }} user</h2>
             </div>
             <div class="row view-profile">
+                <a class="profile-posts col-sm-12 col-md-3" href="{% url 'my-posts' %}">My posts</a>
                 <a class="profile-edit col-sm-12 col-md-3" href="{% url 'edit-profile' %}">Edit profile</a>
                 <a class="profile-delete col-sm-12 col-md-3" href="#">Delete Profile</a>
             </div> 

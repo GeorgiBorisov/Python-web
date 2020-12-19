@@ -19,7 +19,7 @@ from django.conf import settings
 from django.conf.urls.static import static
 from python_web_exam.views.index import index
 from python_web_exam.views.auth import register, signin, signout
-from python_web_exam.views.post import create, edit_post, single_post, delete_post, all_posts, latest
+from python_web_exam.views.post import create, edit_post, single_post, delete_post, all_posts, latest, my_posts
 from python_web_exam.views.profile import view_profile, edit_profile, delete_profile
 
 urlpatterns = [
@@ -37,5 +37,6 @@ urlpatterns = [
     path('edit-post/<int:pk>', edit_post, name='edit-post'),
     path('delete-post/<int:pk>', delete_post, name='delete-post'),
     path('latest/', latest, name='latest'),
+    path('my-posts/', my_posts, name='my-posts')
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT) 
 

@@ -8,9 +8,7 @@ class UsersForm(forms.ModelForm):
     class Meta:
         model = User
         fields = ['username', 'password']
-        
-        
-        
+                        
 class UsersLoginForm(forms.Form):
     password = forms.CharField(widget=forms.PasswordInput)
     username = forms.CharField()

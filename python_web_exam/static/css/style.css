@@ -73,7 +73,7 @@ body .a, body a:active, body a:hover, body a:focus {
 }
 
 main {
-    padding-top: 80px;
+    padding-top: 70px;
     padding-bottom: 90px;
 }
 
@@ -110,7 +110,13 @@ h2 {
     height: 100%;
 }
 
-.menu-container ul>li>a:hover {
+.menu-item-active {
+    border: 2px solid #01364e;
+    background: #01364e;
+}
+
+.menu-container ul>li>a:hover
+{
     color: #000;
     border: 2px solid #000;
     background: #fff;
@@ -242,6 +248,11 @@ form > label,
 form > input {
     display: block;
 }
+
+form.auth-form {
+    padding-top: 50px;
+}
+
 form.auth-form>input,
 form.auth-form>label {
     width: 50%;
@@ -304,10 +315,6 @@ textarea:focus {
     background: #fff;
 }
 
-/* .view-profile {
-    padding: 50px 0;
-} */
-
 h2 {
     margin: 10px 0;
 }
@@ -328,6 +335,11 @@ a.cancel-delete  {
     margin-top: 30px;
     text-align: center;
 }
+a.profile-posts:hover {
+    background: #01364e;
+    color: #fff;
+}
+
 a.post-edit,
 a.post-delete {
     margin-bottom: 30px;
@@ -494,7 +506,14 @@ footer p {
     top: 25px;
     display: none;
 }
-
+@media(max-width: 1080px) {
+    .menu-container ul>li>a {
+        padding: 10px;
+    }
+    h2[class*="profile"]:first-of-type {
+        margin-top: 50px;
+    }
+}
 @media(max-width: 768px) {
     h2 {
         font-size: 2em;
@@ -607,7 +626,7 @@ footer p {
     }
 
     main {
-        padding-top: 60px;
+        padding-top: 70px;
         padding-bottom: 70px;
     }
 
@@ -617,5 +636,9 @@ footer p {
 
     .profile-mobile {
         padding-left: 15px;
+    }
+
+    a.profile-posts {
+        margin-top: 50px;
     }
 }

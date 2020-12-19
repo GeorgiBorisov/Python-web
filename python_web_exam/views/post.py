@@ -32,7 +32,7 @@ def all_posts(request):
             'title': 'All posts',
             'posts': posts
         }
-        data['custom_range'] = range(1,6)
+        # data['custom_range'] = range(1,6)
         return render(request, 'list.html', data)
         
     
@@ -48,12 +48,22 @@ def single_post(request, pk):
             'user': request.user
         }
         return render(request, 'singlePost.html', data)
-    
+
+def my_posts(request):
+    if request.method == 'GET':
+        session = Session.objects.get(session_key=request.session.session_key)
+        user_id = session.get_decoded().get('_auth_user_id')
+        posts =  Posts.objects.filter(author=user_id)
+        data = {
+            'title': 'My posts',
+            'posts': posts
+        }    
+        return render(request, 'list.html', data)
 def latest(request):
     if request.method == 'GET':
         posts = Posts.objects.all().order_by('-created')[:10]
         data = {
-            'title': 'Latest',
+            'title': 'Latest posts',
             'posts': posts
         }
         return render(request, 'list.html', data)

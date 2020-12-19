@@ -7,6 +7,7 @@ def view_profile(request):
     if request.method == 'GET':
        user = User.objects.get(username=request.user)
        data = {
+           'title': 'View profile',
            'user': user,
            'action': 'view'
        }
