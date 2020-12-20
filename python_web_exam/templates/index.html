@@ -10,7 +10,7 @@
                         <p class="content">{{ post.content|slice:":1000" }}</p>
                     </div>
                 {% endfor %}
-            {% if request.user != 'AnonymousUser' %}
+            {% if registered %}
                 <h2 class="section-title my-posts">My latest posts</h2>
                 {% for post in user_posts %}
                     <div class="col-12 col-md-6">

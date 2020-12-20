@@ -20,7 +20,8 @@ def index(request):
             data = {
                 'title': 'Home',
                 'posts':posts,
-                'user_posts':user_posts
+                'user_posts':user_posts,
+                'registered': True
             }
             return render(request, 'index.html', data)
             
