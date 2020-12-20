@@ -59,6 +59,7 @@ def my_posts(request):
             'posts': posts
         }    
         return render(request, 'list.html', data)
+    
 def latest(request):
     if request.method == 'GET':
         posts = Posts.objects.all().order_by('-created')[:10]
@@ -94,7 +95,7 @@ def edit_post(request, pk):
         }
         return render(request, 'post.html', data)
     elif request.method == 'POST':
-        form = PostsForm(request.POST, request.FILES)
+        form = PostsForm(request.POST, request.FILES, instance=post)
         if form.is_valid():
             form.save()
             return redirect('/post/' + str(post.pk))
