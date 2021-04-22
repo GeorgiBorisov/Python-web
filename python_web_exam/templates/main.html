@@ -19,8 +19,8 @@
                     <div class="bar-three"></div>
                 </div>
                 <ul class="menu-wrapper">
-                    {% if request.session.is_logged %}
                     <li><a href="{% url 'index' %}" class="menu-item">Home</a></li>
+                    {% if request.session.is_logged %}
                     <li><a href="{% url 'view-profile' %}" class="menu-item">{{ request.session.user_id }}</a></li>
                     <li><a href="{% url 'logout' %}" class="menu-item">Logout</a></li>
                     <li><a href="{% url 'create' %}" class="menu-item">Create post</a></li>
